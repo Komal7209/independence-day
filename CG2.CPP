@@ -1,0 +1,759 @@
+#include<conio.h>
+#include<iostream.h>
+#include<graphics.h>
+#include<dos.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<bios.h>
+#define SPECIAL_KEY bioskey
+
+void final_flag()
+{
+	setcolor(6);
+	rectangle(0,160,getmaxx(),0);
+	setfillstyle(1,6);
+	floodfill(10,20,6);
+
+	setcolor(WHITE);
+	rectangle(0,315,getmaxx(),161);
+	setfillstyle(1,WHITE);
+	floodfill(10,200,WHITE);
+
+	setcolor(2);
+	rectangle(0,getmaxy(),getmaxx(),316);
+	setfillstyle(1,2);
+	floodfill(10,340,2);
+	setcolor(WHITE);
+}
+
+void main()
+{
+ clrscr();
+ int i;
+ int gdriver=DETECT,gmode;
+ initgraph(&gdriver,&gmode,"C:\\TC\\BGI");
+
+ for(i=0;i<117;i++) {
+
+  setcolor(15) ;
+
+  line(150,100,150,360) ;
+
+  // sun
+  setfillstyle(1,14);
+  circle(550,70,30);
+  floodfill(550,70,15);
+
+  line(580,70,620,70);
+  line(520,70,480,70);
+  line(550,100,550,140);
+  line(550,40,550,1);
+
+  line(574,53,595,33);
+  line(526,53,505,33);
+  line(526,87,505,102);
+  line(574,87,595,105);
+
+ // flag stand
+
+  setfillstyle(1,6);
+  line(100,360,200,360);
+  line(100,360,100,380);
+  line(200,360,200,380) ;
+  line(100,380,200,380) ;
+  floodfill(150,370,15);
+
+  setfillstyle(1,6) ;
+  line(70,380,230,380) ;
+  line(70,380,70,400);
+  line(230,380,230,400);
+  line(70,400,230,400);
+  floodfill(150,390,15);
+
+  // the floor
+  setcolor(15) ;
+  //setlinestyle(0,0,3);
+  line(0,400,70,400) ;
+  line(230,400,639,400) ;
+
+   //standing man's face 1
+
+  setfillstyle(1,14) ;
+  arc(600,300,137,40,15);
+  line(612,290,590,290);
+  floodfill(605,300,15);
+
+  //cap
+  setfillstyle(1,2);
+  arc(600,289,0,180,16) ;
+  line(616,289,584,289);
+  floodfill(600,287,15);
+
+  setfillstyle(1,6);
+  line(584,289,572,289);
+  line(572,289,572,285);
+  line(572,285,584,285);
+  line(584,285,584,289);
+  line(584,289,572,289);
+  floodfill(584,286,15);
+
+  //eyes
+  setfillstyle(1,0) ;
+  circle(594,296,3);
+  floodfill(594,296,15);
+
+  setfillstyle(1,0);
+  circle(606,296,3);
+  floodfill(606,296,15);
+
+  //nose
+  setfillstyle(1,0);
+  circle(600,305,3);
+  floodfill(600,305,15);
+
+  //standing man's feet and body 1
+
+  //neck
+  setcolor(15) ;
+  line(597,323,597,316);
+  line(603,323,603,316);
+
+  //body
+  setcolor(2);
+  setfillstyle(1,2);
+  line(585,323,615,323);
+  line(585,323,585,346);
+  line(585,346,615,346);
+  line(615,346,615,323);
+  floodfill(590,340,2);
+
+  setcolor(6);
+  setfillstyle(1,6);
+  line(585,347,615,347);
+  line(585,347,585,370);
+  line(585,370,615,370);
+  line(615,370,615,347);
+  floodfill(590,360,6) ;
+
+  //feet
+  setcolor(15);
+  line(594,370,594,398);
+  line(606,370,606,398);
+
+  //standing man's face 2
+  setcolor(15);
+  setfillstyle(1,14);
+  arc(500,300,137,40,15) ;
+  line(512,290,490,290);
+  floodfill(500,300,15);
+
+   //cap
+  setfillstyle(1,2);
+  arc(500,289,0,180,16) ;
+  line(516,289,484,289);
+  floodfill(500,287,15);
+
+  setfillstyle(1,1);
+  line(484,289,472,289);
+  line(472,289,472,285);
+  line(472,285,484,285);
+  line(484,285,484,289);
+  line(484,289,472,289);
+  floodfill(484,286,15);
+
+  //eyes
+  setfillstyle(1,0) ;
+  circle(494,296,3);
+  floodfill(494,296,15);
+
+  setfillstyle(1,0);
+  circle(506,296,3);
+  floodfill(506,296,15);
+
+  //nose
+  setfillstyle(1,0);
+  circle(500,305,3);
+  floodfill(500,305,15);
+
+  //standing man's feet and body 2
+
+  //neck
+  setcolor(15);
+  line(497,323,497,316);
+  line(503,323,503,316);
+  setcolor(15);
+
+  //body
+  setcolor(2);
+  setfillstyle(1,2);
+  line(485,323,515,323);
+  line(485,323,485,346);
+  line(485,346,515,346);
+  line(515,346,515,323);
+  floodfill(490,340,2);
+
+  setcolor(6);
+  setfillstyle(1,6);
+  line(485,346,515,346);
+  line(485,323,485,370);
+  line(485,370,515,370);
+  line(515,370,515,346);
+  floodfill(490,360,6);
+
+  //feet
+  setcolor(15);
+  line(494,370,494,398);
+  line(506,370,506,398);
+  setcolor(15);
+
+  // walking man's face
+
+  setfillstyle(1,14) ;
+  arc(400-i,300,137,40,15);
+  line(412-i,290,390-i,290);
+  floodfill(405-i,300,15);
+
+  //cap
+   setfillstyle(1,2);
+  arc(400-i,289,0,180,16) ;
+  line(416-i,289,384-i,289);
+  floodfill(400-i,287,15);
+
+  setfillstyle(1,2);
+  line(384-i,289,372-i,289);
+  line(372-i,289,372-i,285);
+  line(372-i,285,384-i,285);
+  line(384-i,285,384-i,289);
+  line(384-i,289,372-i,289);
+  floodfill(384-i,286,15);
+
+  //eyes
+  setfillstyle(1,0) ;
+  circle(394-i,296,3);
+  floodfill(394-i,296,15);
+
+  setfillstyle(1,0);
+  circle(406-i,296,3);
+  floodfill(406-i,296,15);
+
+  //nose
+  setfillstyle(1,0);
+  circle(400-i,305,3);
+  floodfill(400-i,305,15);
+
+  // walking man's feet and body
+
+  //neck
+  line(397-i,323,397-i,316);
+  line(403-i,323,403-i,316);
+
+  //body
+  setcolor(2);
+  setfillstyle(1,2);
+  line(385-i,323,415-i,323);
+  line(385-i,323,385-i,346);
+  line(385-i,346,415-i,346);
+  line(415-i,346,415-i,323);
+  floodfill(390-i,340,2);
+
+  setcolor(6);
+  setfillstyle(1,6);
+  line(385-i,346,415-i,346);
+  line(385-i,346,385-i,370);
+  line(385-i,370,415-i,370);
+  line(415-i,370,415-i,323);
+  floodfill(390-i,360,6) ;
+
+
+  if(i%5==0 && i%10!=0 && i<115) {
+
+	 //walking man feet  position1
+	 setcolor(15);
+	 line(406-i,370,406-i,398);
+	 line(394-i,370,389-i,378);
+	 line(389-i,378,389-i,398);
+
+	 //SECOND HAND POSITION of walking man
+	 setcolor(15);
+	 line(415-i,335,390-i,360) ;
+	 line(385-i,335,370-i,343);
+
+	 //FIRST HAND POSITION of standing man  1
+	 setcolor(15);
+	 line(615,335,630,350) ;
+	 line(585,335,560,350) ;
+	 setcolor(15);
+
+	 //FIRST HAND POSITION of standing man 2
+	 setcolor(15);
+	 line(515,335,530,350);
+	 line(485,335,460,350);
+     setcolor(15);
+     delay(200);
+  }
+
+  if(i%10 == 0 && i<115) {
+
+     //FIRST HAND POSITION of walking man
+     setcolor(15);
+     line(415-i,335,430-i,360) ;
+     line(385-i,335,360-i,360) ;
+
+     //FIRST HAND POSITION of standing man  1
+     setcolor(15);
+     line(615,335,630,350) ;
+     line(585,335,560,350) ;
+     setcolor(15);
+
+     //FIRST HAND POSITION of standing man 2
+     setcolor(15);
+     line(515,335,530,350);
+     line(485,335,460,350);
+     setcolor(15);
+
+     //walking man feet  position1
+     setcolor(15);
+     line(406-i,370,420-i,398);
+     line(394-i,370,380-i,398);
+      delay(200);
+  }
+
+  if(i%10 != 0 && i<115) {
+
+  //SECOND HAND POSITION of walking man
+    setcolor(15);
+    line(415-i,335,390-i,360) ;
+    line(385-i,335,370-i,343);
+
+    //SECOND HAND POSITION of standing man 1
+    setcolor(15);
+    line(615,335,630,350) ;
+     line(585,335,560,350) ;
+
+    //FIRST HAND POSITION of standing man 2
+    setcolor(15);
+    line(515,335,530,350);
+     line(485,335,460,350);
+
+     setcolor(15);
+
+     //walking man feet  position1
+    setcolor(15);
+     line(406-i,370,406-i,398);
+     line(394-i,370,389-i,378);
+     line(389-i,378,410-i,398);
+
+  }
+  delay(10) ;
+
+  if(i>=115) {
+    // walking man's salute
+    setcolor(15);
+    line(385-i,335,370-i,360);
+    line(415-i,335,420-i,320) ;
+    line(420-i,320,410-i,296);
+
+    //walking man's feet
+    setcolor(15);
+    line(394-i,370,394-i,398);
+    line(406-i,370,406-i,398);
+
+    //standing man's salute 1
+    setcolor(15);
+    line(585,335,570,360);
+    line(615,335,620,320);
+    line(620,320,610,296);
+    setcolor(15);
+
+    // standing man's salute 2
+    setcolor(15);
+    line(485,335,470,360);
+    line(515,335,520,320);
+    line(520,320,510,296);
+    setcolor(15);
+
+    delay(1000);
+
+    if(i==116){
+      for(int j=0; j<=250;j++) {
+
+      //flag hosting beginning
+	setlinestyle(0,0,1);
+	setcolor(15);
+	arc(150,350-j,0,360,5);
+	delay(10);
+
+	//The flag
+	if(j>249){
+	  setfillstyle(1,6);
+	  line(150,100,270,100);
+	  line(150,120,270,120);
+	  line(150,100,150,120);
+	  line(270,100,270,120);
+	  floodfill(200,110,15);
+
+	  setfillstyle(1,15);
+	  line(150,120,270,120);
+	  line(150,140,270,140) ;
+	  line(150,120,150,140);
+	  line(270,120,270,140);
+	  floodfill(200,130,15) ;
+
+	  setfillstyle(1,2) ;
+	  line(150,140,270,140);
+	  line(150,160,270,160);
+	  line(150,140,150,160);
+	  line(270,140,270,160);
+	  floodfill(200,150,15);
+
+	  setcolor(1) ;
+	  arc(210,130,0,360,5) ;
+	  arc(210,130,0,360,7);
+	  delay(20);
+
+	  //flower rain
+	  int l=6 ;    //y-axis
+	  while(l<=700){
+	    int m=6 ;    //x-axis
+	    while(m<=700) {
+
+	    if (l>150 && l<210 && (m>150 && m<280))      //min x min y of flag so that flowers drop under it
+	    {
+	       setcolor(6);
+	       circle(m,l,2);      //centre of flower
+	       circle(m+4,l,2);     // petal of flower
+	       circle(m-4,l,2);
+	       circle(m,l+4,2);
+	       circle(m,l-4,2);
+	    }
+	   else if(l>210 && l<320 && (m>150 && m<280)){
+	     setcolor(15);
+	     circle(m,l,2) ;
+	     circle(m+4,l,2);
+	     circle(m-4,l,2);
+	     circle(m,l+4,2);
+	     circle(m,l-4,2);
+	   }
+	   else if(l>320 && (m>150 && m<280)){
+	     setcolor(2);
+	     circle(m,l,2) ;
+	    circle(m+4,l,2);
+	    circle(m-4,l,2);
+	    circle(m,l+4,2);
+	     circle(m,l-4,2) ;
+	   }
+	    m=m+40;        horizontal distance between flower
+	   }
+	   l=l+50;        vertical distance between flowers
+	   delay(400);   speed of flower
+	 }
+
+	// NATIONAL ANTHEM
+
+	 float a =493, b=523, c=587, d=659, e=698, f=783, g=880, h=987,
+	 i=1046, j=830;
+
+	//jan gan man adhinayak jaya hai
+	sound(b); delay(300); sound(c); delay(300);
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d); delay(300);nosound(); sound(0); delay(10);nosound();
+	sound(d);delay(300);sound(c);delay(300);
+	sound(d);delay(300);sound(e);delay(300);
+
+	//bharat bhagya vidhata
+
+	sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+	sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+	sound(d);delay(300);
+	sound(c);delay(300);nosound();sound(0);delay(10);nosound();
+	sound(c);delay(300);nosound();sound(0);delay(10);nosound();
+	sound(c);delay(300);sound(a);delay(300);
+	sound(c);delay(300);sound(b);delay(300);
+
+       //punjab sindh gujarat maratha
+       sound(b);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(b);delay(300);
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+       sound(f);delay(300);sound(j);delay(300);
+       sound(g);delay(300);sound(f);delay(300);
+
+
+      //dravid utkal banga
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);sound(d);delay(300);
+      sound(c);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(c);delay(300);sound(e);delay(300);
+      sound(d);delay(300);
+
+     //vindhya himachal yamuna ganga
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);sound(c);delay(300);
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);
+
+      //uchchal jaldhi taranga
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);
+      sound(c);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(c);delay(300);sound(a);delay(300);
+      sound(c);delay(300);sound(b);delay(300);
+
+      //tav shubh name jage
+      sound(b);delay(300);sound(c); delay(300);
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);sound(c);delay(300);
+      sound(e);delay(300);
+
+     //tav shubh ashish mange
+      sound(d);delay(300);sound(e);delay(300);
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);sound(e);delay(300) ;
+      sound(d);delay(300);sound(c);delay(300);
+
+      //gaye tav jay gatha
+      sound(e);delay(300);
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);
+      sound(c);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(c);delay(300);sound(a);delay(300);
+      sound(c);delay(300);sound(b);delay(300);
+
+      //jan gan mnagal dayak jaya he
+      sound(b);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(b);delay(300);
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);sound(d);delay(300);
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);sound(g);delay(300);
+
+      //bharat bhagya vidhata
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(e);delay(300);sound(d);delay(300);
+      sound(c);delay(300);sound(e);delay(300);
+      sound(d);delay(300);
+
+      //jay he, jay he, jay he
+      sound(h);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(h);delay(300);sound(i);delay(300);
+      sound(g);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(g);delay(300);sound(h);delay(300);
+      sound(f);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(f);delay(300);sound(g);delay(300);
+
+      //jay jay jay jay he
+      sound(b);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(b);delay(300);
+      sound(c);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(c);delay(300);
+      sound(d);delay(300);nosound();sound(0);delay(10);nosound();
+      sound(d);delay(300);sound(c);delay(300);
+      sound(d);delay(300);sound(e);delay(300);
+
+      nosound();
+
+	  //displaying of text
+	  settextstyle(1,0,4);
+	  setcolor(4) ;
+	  outtextxy(140,25,"Bharat Mata Ki Jai !");
+
+	  delay(6000);
+
+	  //last flag screen
+	  for(i=0;i<=640;i++) {
+
+		setcolor(6);
+		arc(i+1,1,0,360,5);
+		arc(i+1,12,0,360,5);
+		arc(i+1,23,0,360,5);
+		arc(i+1,34,0,360,5);
+		arc(i+1,45,0,360,5);
+		arc(i+1,56,0,360,5);
+		arc(i+1,67,0,360,5);
+		arc(i+1,78,0,360,5);
+		arc(i+1,89,0,360,5);
+		arc(i+1,100,0,360,5);
+		arc(i+1,111,0,360,5);
+		arc(i+1,122,0,360,5);
+		arc(i+1,133,0,360,5);
+		arc(i+1,144,0,360,5);
+		arc(i+1,155,0,360,5);
+
+		setcolor(15);
+		arc(i+1,166,0,360,5);
+		arc(i+1,177,0,360,5);
+		arc(i+1,188,0,360,5);
+		arc(i+1,199,0,360,5);
+		arc(i+1,210,0,360,5);
+		arc(i+1,221,0,360,5);
+		arc(i+1,232,0,360,5);
+		arc(i+1,243,0,360,5);
+		arc(i+1,254,0,360,5);
+		arc(i+1,265,0,360,5);
+		arc(i+1,276,0,360,5);
+		arc(i+1,287,0,360,5);
+		arc(i+1,298,0,360,5);
+		arc(i+1,309,0,360,5);
+
+		setcolor(2);
+		arc(i+1,320,0,360,5);
+		arc(i+1,331,0,360,5);
+		arc(i+1,342,0,360,5);
+		arc(i+1,353,0,360,5);
+		arc(i+1,364,0,360,5);
+		arc(i+1,375,0,360,5);
+		arc(i+1,386,0,360,5);
+		arc(i+1,397,0,360,5);
+		arc(i+1,408,0,360,5);
+		arc(i+1,419,0,360,5);
+		arc(i+1,430,0,360,5);
+		arc(i+1,441,0,360,5);
+		arc(i+1,452,0,360,5);
+		arc(i+1,463,0,360,5);
+		arc(i+1,474,0,360,5);
+		arc(i+1,485,0,360,5);
+
+		delay(5);
+
+	  }
+	  delay(3000);
+
+	  //display happy independence day
+	  for(int K=0;K<15;K++) {
+		final_flag();
+		settextstyle(10,0,4);
+		setcolor(K) ;
+		outtextxy(20,200,"Happy Independence Day");
+		int ma;
+		randomize();
+		ma=getmaxx();    //for fetching the max x coordinate for current graphic mode
+		int x,y,color,i;
+
+	  //fireworks
+
+	   // for(int a=0;a<5;a++)
+		//{
+		   x=ma-50;
+		   y=random(270)+50;           //random function for randomly displaying on screen
+	      //	   color=random(7)+9;
+
+		   /*firework one*/
+
+		   for(i=0;i<50;i++)
+		   {
+		  putpixel(x+i,y+random(4)+7,4);putpixel(x,y+random(4)+7,4);       //4 colors are used as there are 4 loops
+		  putpixel(x+i,y-i/3+random(4)+7,4);
+		  putpixel(x+i/2,y-i/2+random(4)+7,4);
+		  putpixel(x+i/2,y+i/2+random(4)+7, 4);
+		  putpixel(x+i,y+i/4+random(4)+7,4);putpixel(x-i,y+random(4),4);
+		  putpixel(x-i,y-i/3+random(4)+7,4);
+		  putpixel(x-i/2,y-i/2+random(4)+7,4);
+		  putpixel(x-i/2,y+i/2+random(4)+7,4);
+		  putpixel(x-i,y+i/4+random(4)+7,4);putpixel(x+random(4),y-i,4);
+		  putpixel(x+2*i/3+random(4),y-2*i/3,4);
+		  putpixel(x-2*i/3+random(4),y-2*i/3,4);
+		  putpixel(x-i/3+random(4),y-i,4);putpixel(x+i/3+random(4),y-i,4);
+		  putpixel(x-i+random(4),y-i/10,4);putpixel(x+i+random(4),y-i/10,4);
+		  putpixel(x+random(4),y+i,4);
+		  putpixel(x+2*i/3+random(4),y+2*i/3,4);
+		  putpixel(x-2*i/3+random(4),y+2*i/3,4);
+		  putpixel(x-i/3+random(4),y+i,4);putpixel(x+i/3+random(4),y+i,4);
+		  putpixel(x-i+random(4),y+i/10,4);
+		  delay(3);
+		   }
+		   x=100; y=random(270)+50;
+		   /*firework two*/
+		   for(i=0;i<50;i++)
+	       {
+		  putpixel(x+i,y+random(4)+7,1);putpixel(x,y+random(4)+7,1);
+		  putpixel(x+i,y-i/3+random(4)+7,1);
+		  putpixel(x+i/2,y-i/2+random(4)+7,1);
+		  putpixel(x+i/2,y+i/2+random(4)+7,1);
+		  putpixel(x+i,y+i/4+random(4)+7,1);putpixel(x-i,y+random(4),1);
+		  putpixel(x-i,y-i/3+random(4)+7,1);
+		  putpixel(x-i/2,y-i/2+random(4)+7,1);
+		  putpixel(x-i/2,y+i/2+random(4)+7,1);
+		  putpixel(x-i,y+i/4+random(4)+7,1);putpixel(x+random(4),y-i,1);
+		  putpixel(x+2*i/3+random(4),y-2*i/3,1);
+		  putpixel(x-2*i/3+random(4),y-2*i/3,1);
+		  putpixel(x-i/3+random(4),y-i,1);putpixel(x+i/3+random(4),y-i,1);
+		  putpixel(x-i+random(4),y-i/10,1);putpixel(x+i+random(4),y-i/10,1);
+		  putpixel(x+random(4),y+i,1);
+		  putpixel(x+2*i/3+random(4),y+2*i/3,1);
+		  putpixel(x-2*i/3+random(4),y+2*i/3,1);
+		  putpixel(x-i/3+random(4),y+i,1);putpixel(x+i/3+random(4),y+i,1);
+		  putpixel(x-i+random(4),y+i/10,1);
+		  delay(3);
+	       }
+	       x=500;y=random(270)+50;
+	       for(i=0;i<100;i++)
+	       {
+		  putpixel(x-i/2+random(i),y-i/2+random(i),5);
+		  putpixel(x+2-i/2+random(i),y+2-i/2+random(i),5);putpixel(x-i/2+random(i),y-i/2+random(i),5);
+		  putpixel(x+2-i/2+random(i),y+2-i/2+random(i),5);
+		  delay(3);
+	       }
+	       x=250;y=random(270)+50;
+	       for(i=0;i<100;i++)
+	       {
+		  putpixel(x-i/2+random(i),y-i/2+random(i),0);
+		  putpixel(x+2-i/2+random(i),y+2-i/2+random(i),0);putpixel(x-i/2+random(i),y-i/2+random(i),0);
+		  putpixel(x+2-i/2+random(i),y+2-i/2+random(i),0);
+		  delay(3);
+	       }
+		   delay(50);
+	       cleardevice();
+	    //}
+	    delay(10);
+	  }
+	}
+	  }
+
+
+
+	}
+
+  }
+  cleardevice();
+ }
+getch();
+
+ closegraph();
+
+}
